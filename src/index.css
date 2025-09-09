@@ -1,0 +1,14 @@
+:root {
+  --8x: calc(1rem/2);
+  --16x: 1rem;
+  --24x: calc(1rem * 0.5);
+  --32x: calc(1rem * 2);
+
+
+  --light-bg: #EEF5F8;
+  --light-accent: #E78F78;
+  --light-brand: #43BBDC;
+
+  --dark-bg: #696467;
+  --dark-accent: #929291;
+}
