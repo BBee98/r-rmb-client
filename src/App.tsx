@@ -1,14 +1,12 @@
-import './App.css'
-import { RMBForm } from './components/form'
+import './app.module.css'
+import styles from './app.module.css'
+import {Navbar} from "./components/Navbar";
 
 function App() {
 
   return (
-    <section>
-        <nav>
-
-        </nav>
-        <RMBForm />
+    <section className={styles.grid}>
+        <Navbar.Vertical />
     </section>
   )
 }
