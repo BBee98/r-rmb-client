@@ -19,6 +19,12 @@
   --dark-bg: #696467;
   --dark-bg-hover: #565253;
   --dark-accent: #929291;
+
+
+  --mobile-breakpoint: 576px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 1400px;
+
 }
 
 * {
