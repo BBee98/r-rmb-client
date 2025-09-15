@@ -1,0 +1,14 @@
+.nav {
+    @media (width < 576px) {
+        position: fixed;
+        max-height: 100px;
+        grid-column: 1 / span 12;
+    }
+
+    @media (width >= 576px) {
+        grid-column: 1 / span 4;
+    }
+
+    display: flex;
+    gap: var(--8x);
+}

@@ -1,3 +1,4 @@
 export const CreateOptions = [
-    "textField"
+    "textField",
+    "textArea",
 ]

@@ -1,5 +1,5 @@
-import {Vertical} from "./Vertical";
+import {Options} from "./templates";
 
 export const Navbar = {
-    Vertical,
+    Options,
 }

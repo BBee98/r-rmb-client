@@ -6,7 +6,7 @@ function App() {
 
   return (
     <section className={styles.grid}>
-        <Navbar.Vertical />
+        <Navbar.Options />
     </section>
   )
 }

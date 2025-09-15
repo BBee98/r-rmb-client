@@ -1,7 +1,8 @@
 {
   "form": {
     "create": {
-      "textField": "Campo de texto"
+      "textField": "Campo de texto",
+      "textArea": "Area de texto"
     }
   }
 }

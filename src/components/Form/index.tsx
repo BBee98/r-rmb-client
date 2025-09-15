@@ -1,8 +1,5 @@
-import {Form} from "react-hook-form";
+import {InternalForm} from "./Canvas";
 
-export const RMBForm = () => {
-
-    return <Form>
-
-    </Form>
+export const Canvas = {
+    Form: InternalForm,
 }
