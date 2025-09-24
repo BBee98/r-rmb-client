@@ -1,8 +1,6 @@
-import {Form} from "react-hook-form";
+export const Form = () => {
 
-export const InternalForm = () => {
+    return <form>
 
-    return <Form>
-
-    </Form>
+    </form>
 }

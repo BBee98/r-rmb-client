@@ -1,5 +1,5 @@
-import {InternalForm} from "./Canvas";
+import {Form} from "./Canvas";
 
 export const Canvas = {
-    Form: InternalForm,
+    Form: Form,
 }
