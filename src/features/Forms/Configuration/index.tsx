@@ -2,27 +2,25 @@ import {useTranslation} from "react-i18next";
 
 import styles from './styles.module.css'
 import {type SubmitHandler, useForm} from "react-hook-form";
-import type {ConfigurationInputProps} from "./types.ts";
+import {ConfigurationFormControls, type ConfigurationInputProps} from "./model.ts";
 
 export const Configuration = () => {
     const {t} = useTranslation()
-    const { handleSubmit } = useForm<ConfigurationInputProps>();
+    const {handleSubmit, register} = useForm<ConfigurationInputProps>();
 
-    return (<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="from" className={styles.group}>
-            {t("form.configuration.from")}:
-            <input id="from" type="text" name="from"/>
-        </label>
-        <label htmlFor="to" className={styles.group}>
-            {t("form.configuration.to")}:
-            <input id="to" type="text" name="to"/>
-        </label>
-        <label htmlFor="subject" className={styles.group}>
-            {t("form.configuration.subject")}:
-            <input id="subject" type="text" name="subject"/>
-        </label>
-    </form>)
+    return <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        {
+            Object.keys(ConfigurationFormControls).map((key: string) => {
+                const options = ConfigurationFormControls[key];
+                return <label htmlFor={key} className={styles.group} key={`controlField-${key}`}>
+                    {t(`form.configuration.${key}`)}:
+                    <input id={key} type="text" {...register((key as keyof ConfigurationInputProps), options)} />
+                </label>
+            })
+        }
+    </form>
 }
- function onSubmit (data: ConfigurationInputProps): SubmitHandler<ConfigurationInputProps> {
-    
+
+function onSubmit(data: ConfigurationInputProps): SubmitHandler<ConfigurationInputProps> {
+    console.log("Data,", data)
 }

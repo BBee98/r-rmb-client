@@ -7,7 +7,7 @@ export const Options = () => {
 
     return (
         <nav className={styles.nav}>
-            {CreateOptions.map((option) => <Create fieldName={option}/>)}
+            {CreateOptions.map((option) => <Create fieldName={option} key={`create-option-${option}`}/>)}
         </nav>
     )
 }

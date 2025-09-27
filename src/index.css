@@ -9,17 +9,8 @@
   --h-screen: 100vh;
   --w-screen: 100vw;
 
-
-  --light-bg: #EEF5F8;
-  --light-bg-hover: rgba(238, 245, 248, 0.6);
-  --light-accent: #E78F78;
-  --light-accent-hover: rgb(236, 113, 85);
-  --light-brand: #43BBDC;
-
-  --dark-bg: #696467;
-  --dark-bg-hover: #565253;
-  --dark-accent: #929291;
-
+  --color-1: color(display-p3 0.977 0.888 0.795);
+  --color-2: color(display-p3 0.091 0.043 0.218);
 
   --mobile-breakpoint: 576px;
   --tablet-breakpoint: 768px;
@@ -33,8 +24,19 @@
   box-sizing: border-box;
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+/* Normal theme */
+.combo-1 {
+  color: var(--color-1);
+  background-color: var(--color-2);
+}
+
+/* Inverse theme */
+.combo-2 {
+  color: var(--color-2);
+  background-color: var(--color-1);
 }
