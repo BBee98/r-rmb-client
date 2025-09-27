@@ -1,14 +1,14 @@
 import './app.module.css'
 import styles from './app.module.css'
 import {Navbar} from "./components/Navbar";
-import {Canvas} from "./components/Form";
+import {Form} from "./features/Forms";
 
 function App() {
 
   return (
     <section className={styles.grid}>
         <Navbar.Options />
-        <Canvas.Form />
+        <Form.Configuration />
     </section>
   )
 }

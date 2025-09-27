@@ -2,7 +2,12 @@
   "form": {
     "create": {
       "textField": "Text field",
-      "textArea": "Text area",
+      "textArea": "Text area"
+    },
+    "configuration": {
+      "to": "To",
+      "from": "From",
+      "subject": "Subject"
     }
   }
 }

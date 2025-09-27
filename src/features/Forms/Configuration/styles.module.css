@@ -1,0 +1,13 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--8x);
+    padding: var(--16x);
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--8x);
+    width: 100%;
+}

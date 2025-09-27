@@ -3,6 +3,11 @@
     "create": {
       "textField": "Campo de texto",
       "textArea": "Area de texto"
+    },
+    "configuration": {
+      "to": "Para",
+      "from": "De",
+      "subject": "Asunto"
     }
   }
 }
