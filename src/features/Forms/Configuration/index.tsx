@@ -18,6 +18,7 @@ export const Configuration = () => {
                 </label>
             })
         }
+        <button> Configurar datos </button>
     </form>
 }
 

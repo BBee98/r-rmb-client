@@ -7,7 +7,10 @@
     "configuration": {
       "to": "Para",
       "from": "De",
-      "subject": "Asunto"
+      "subject": "Asunto",
+      "validation": {
+        "email": "Email no válido. Por favor, escribe un correo válido (por ejemplo: mi-email@gmail.com"
+      }
     }
   }
 }

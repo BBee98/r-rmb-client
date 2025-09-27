@@ -7,7 +7,10 @@
     "configuration": {
       "to": "To",
       "from": "From",
-      "subject": "Subject"
+      "subject": "Subject",
+      "validation": {
+        "email": "Invalid email. Please type a valid one. For example: myemail@gmail.com"
+      }
     }
   }
 }
