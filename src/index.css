@@ -12,9 +12,11 @@
   --color-1: color(display-p3 0.977 0.888 0.795);
   --color-2: color(display-p3 0.091 0.043 0.218);
 
-  --mobile-breakpoint: 576px;
-  --tablet-breakpoint: 768px;
-  --desktop-breakpoint: 1400px;
+  --mobile-breakpoint: 480px;
+  --mobile-lds-breakpoint: 768px;
+  --tablet-breakpoint: 834px;
+  --tablet-lds-breakpoint: 1024px;
+  --lapto-and-desktop-breakpoint: 1440px;
 
 }
 

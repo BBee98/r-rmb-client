@@ -1,10 +1,4 @@
-import type {RegisterOptions} from "react-hook-form";
-
-const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
-
-type FormControls = {
-    [key: string]: RegisterOptions
-}
+import {emailPattern, type FormControls} from "../model.ts";
 
 export interface ConfigurationInputProps {
     from: string;
