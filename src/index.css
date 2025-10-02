@@ -1,4 +1,5 @@
 :root {
+  --4x: calc(1rem/4);
   --8x: calc(1rem/2);
   --16x: 1rem;
   --24x: calc(1rem * 0.5);
@@ -41,4 +42,9 @@
 .combo-2 {
   color: var(--color-2);
   background-color: var(--color-1);
+}
+
+
+input {
+  padding: var(--4x);
 }

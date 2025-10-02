@@ -18,8 +18,10 @@ export const ConfigurationFormControls: FormControls = {
     },
     to: {
         required: true,
+        message: "form.validation.requiredField"
     },
     subject: {
         required: true,
+        message: "form.validation.requiredField"
     }
 }
