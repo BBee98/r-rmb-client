@@ -4,6 +4,9 @@
       "textField": "Text field",
       "textArea": "Text area"
     },
+    "validation": {
+      "requiredField": "This field is required"
+    },
     "configuration": {
       "to": "To",
       "from": "From",

@@ -4,6 +4,9 @@
       "textField": "Campo de texto",
       "textArea": "Area de texto"
     },
+    "validation": {
+      "requiredField": "Este campo es obligatorio"
+    },
     "configuration": {
       "to": "Para",
       "from": "De",

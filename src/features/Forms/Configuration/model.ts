@@ -10,18 +10,18 @@ export interface ConfigurationInputProps {
 
 export const ConfigurationFormControls: FormControls = {
     from: {
-        required: true,
+        required: "form.validation.requiredField",
         pattern: {
             value: emailPattern,
             message: "form.configuration.validation.email"
         },
     },
     to: {
-        required: true,
-        message: "form.validation.requiredField"
+        required: "form.validation.requiredField",
+        pattern: {
+            value: emailPattern,
+            message: "form.configuration.validation.email"
+        },
     },
-    subject: {
-        required: true,
-        message: "form.validation.requiredField"
-    }
+    subject: {}
 }

@@ -4,6 +4,10 @@ import './index.css'
 import App from './App.tsx'
 import './startup.ts';
 
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <App />

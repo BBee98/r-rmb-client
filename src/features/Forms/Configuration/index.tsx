@@ -33,5 +33,5 @@ export const Configuration = () => {
 }
 
 function onSubmit(data: ConfigurationInputProps): SubmitHandler<ConfigurationInputProps> {
-    console.log("Data,", data)
+    fetch('/api/send-email', {})
 }
