@@ -13,7 +13,8 @@
       "subject": "Subject",
       "validation": {
         "email": "Invalid email. Please type a valid one. For example: myemail@gmail.com"
-      }
+      },
+      "submit": "Send data"
     }
   }
 }

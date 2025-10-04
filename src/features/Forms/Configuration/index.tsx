@@ -1,18 +1,28 @@
 import {useTranslation} from "react-i18next";
-
 import styles from './styles.module.css'
 import {type SubmitHandler, useForm} from "react-hook-form";
 import {ConfigurationFormControls, type ConfigurationInputProps} from "./model.ts";
 import {ErrorInputHandler} from "../Handlers/ErrorInputHandler";
 import type {FormControls} from "../model.ts";
+import {onSubmitHandler} from "./handler.ts";
+import {useEffect} from "react";
 
 export const Configuration = () => {
     const {t} = useTranslation()
     const {
-        handleSubmit, register, formState: {
-            errors
+        handleSubmit, setValue, register, setError, formState: {
+            errors, isReady,
         }
     } = useForm<ConfigurationInputProps>();
+
+    const onSubmit = (data: ConfigurationInputProps) => {
+        onSubmitHandler({data, setError})
+    }
+
+    useEffect(() => {
+        setValue("from", import.meta.env.VITE_TEST_EMAIL)
+        setValue("to", import.meta.env.VITE_TEST_EMAIL)
+    }, [isReady])
 
     return <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         {
@@ -28,10 +38,6 @@ export const Configuration = () => {
                 </label>
             })
         }
-        <button> Configurar datos</button>
+        <button> {t("form.configuration.submit")}</button>
     </form>
-}
-
-function onSubmit(data: ConfigurationInputProps): SubmitHandler<ConfigurationInputProps> {
-    fetch('/api/send-email', {})
 }
