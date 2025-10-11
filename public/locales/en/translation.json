@@ -5,7 +5,9 @@
       "textArea": "Text area"
     },
     "validation": {
-      "requiredField": "This field is required"
+      "requiredField": "This field is required",
+      "malformed": "Something unexpected happened. Please, try again later"
+
     },
     "configuration": {
       "to": "To",

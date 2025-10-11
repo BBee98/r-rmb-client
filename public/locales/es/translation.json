@@ -5,7 +5,8 @@
       "textArea": "Area de texto"
     },
     "validation": {
-      "requiredField": "Este campo es obligatorio"
+      "requiredField": "Este campo es obligatorio",
+      "malformed": "Ha ocurrido un error inesperado. Por favor, inténtelo de nuevo más tarde."
     },
     "configuration": {
       "to": "Para",

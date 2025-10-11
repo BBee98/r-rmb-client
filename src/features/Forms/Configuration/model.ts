@@ -1,5 +1,9 @@
 import {emailPattern, type FormControls} from "../model.ts";
 
+export interface ConfigurationEmailProps {
+    email: ConfigurationInputProps
+}
+
 export interface ConfigurationInputProps {
     from: string;
     to: string;

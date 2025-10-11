@@ -1,11 +1,12 @@
 import {useTranslation} from "react-i18next";
 import styles from './styles.module.css'
-import {type SubmitHandler, useForm} from "react-hook-form";
-import {ConfigurationFormControls, type ConfigurationInputProps} from "./model.ts";
-import {ErrorInputHandler} from "../Handlers/ErrorInputHandler";
+import {useForm} from "react-hook-form";
+import {type ConfigurationEmailProps, ConfigurationFormControls, type ConfigurationInputProps} from "./model.ts";
+import {ErrorInputHandler} from "@forms/Handlers/ErrorInputHandler";
 import type {FormControls} from "../model.ts";
-import {onSubmitHandler} from "./handler.ts";
 import {useEffect} from "react";
+import {onSubmitHandler} from "../Handlers/handler.ts";
+import {useGetUrl} from "@shared/hooks/useGetUrl";
 
 export const Configuration = () => {
     const {t} = useTranslation()
@@ -14,14 +15,21 @@ export const Configuration = () => {
             errors, isReady,
         }
     } = useForm<ConfigurationInputProps>();
+    const url = useGetUrl({version: "v1", endpoint: "email"})
 
     const onSubmit = (data: ConfigurationInputProps) => {
-        onSubmitHandler({data, setError})
+        onSubmitHandler<
+            ConfigurationEmailProps,
+            ConfigurationInputProps>({data: {
+            email: data
+            }, setError, url})
     }
 
     useEffect(() => {
         setValue("from", import.meta.env.VITE_TEST_EMAIL)
         setValue("to", import.meta.env.VITE_TEST_EMAIL)
+        setValue("text", "Prueba desde el frontend")
+        setValue("html", "<p>Prueba desde el frontend</p>")
     }, [isReady])
 
     return <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
