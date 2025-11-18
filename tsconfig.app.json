@@ -23,8 +23,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "paths": {
-      "@forms": ["src/features/Forms/*"],
-      "@shared/hooks": ["src/shared/Hooks/*"],
+      "@components-form": ["src/components/Form"],
+      "@components-form/*": ["src/components/Form/*"],
+      "@features-form": ["src/features/Form"],
+      "@features-form/*": ["src/features/Form/*"],
+      "@shared": ["src/shared"],
+      "@shared/*": ["src/shared/*"],
+      "@hooks": ["src/shared/hooks"],
+      "@hooks/*": ["src/shared/hooks/*"],
     }
   },
   "include": ["src"]

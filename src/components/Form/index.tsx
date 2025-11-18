@@ -1,16 +1,20 @@
 import type {ReactNode} from "react";
-import {useForm, FormProvider, type FieldValues} from "react-hook-form";
+import {MessageInformation} from "./MessageInformation";
 
 type FormProps = {
     children: ReactNode,
-    onSubmit: (data?: FieldValues) => void
+    className: {
+        wrapper?: string,
+        form?: string,
+    }
 }
 
-export const Form = ({children, onSubmit}: FormProps) => {
+export const FormParent = ({className, children}: FormProps) => {
 
-    const formMethods = useForm();
-
-    return <FormProvider {...formMethods}>
-        <form onSubmit={formMethods.handleSubmit(onSubmit)}>{children}</form>
-    </FormProvider>
+    return(
+        <div className={className?.wrapper}>
+            {children}
+            <MessageInformation/>
+        </div>
+    )
 }

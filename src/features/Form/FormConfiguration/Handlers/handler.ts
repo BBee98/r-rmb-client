@@ -24,9 +24,12 @@ export async function onSubmitHandler<T, K extends FieldValues>({data, setError,
         }
             const r = await response.json()
             console.log(r)
-    }).catch(error => {
-        console.error("Bad Petition", error)
-    })
+    }).catch(_ => {
+        setError("root.serverError", {
+            type: "server",
+            message: "form.server.error",
+        })
+     })
 }
 
 
@@ -36,6 +39,7 @@ async function HandleError<T extends FieldValues>({response, setError}: { respon
     if(response.status === 400) {
         if(missingFields.includes("email")){
             setError("root.serverError", {
+                type: "server",
                 message: "form.validation.malformed",
             });
             return;

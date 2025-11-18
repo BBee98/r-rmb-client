@@ -1,5 +1,5 @@
-import {CreateOptions} from "../../Form/Create/fields.ts";
-import {Create} from "../../Form/Create";
+import {CreateOptions} from "@features-form/FormConfiguration/Create/fields.ts";
+import {Create} from "@features-form/FormConfiguration/Create";
 
 import styles from './styles.module.css'
 
