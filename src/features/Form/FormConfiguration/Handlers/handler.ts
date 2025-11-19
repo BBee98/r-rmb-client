@@ -1,11 +1,12 @@
 import {type FieldValues, type Path, type UseFormSetError} from "react-hook-form";
 
-type OnSubmitProps<T> = {
+type OnSubmitProps<T extends FieldValues> = {
     data: T
-    url: string
+    url: string,
+    setError: UseFormSetError<T>
 }
 
-export async function onSubmitHandler<T>({data, url}: OnSubmitProps<T>) {
+export async function onSubmitHandler<T extends FieldValues>({data, url, setError}: OnSubmitProps<T>) {
     fetch(url, {
         headers: {
             'Content-Type': 'application/json',
@@ -18,16 +19,16 @@ export async function onSubmitHandler<T>({data, url}: OnSubmitProps<T>) {
             }),
     }).then(async (response) => {
         if(response.status !== 200) {
-            /*await HandleError({response, setError: setError as UseFormSetError<K>});*/
+            await HandleError<T>({response, setError });
             return;
         }
             const r = await response.json()
             console.log(r)
-    }).catch(_ => {
-       /* setError("root.serverError", {
+    }).catch(() => {
+        setError("root.serverError", {
             type: "server",
             message: "form.server.error",
-        })*/
+        })
      })
 }
 

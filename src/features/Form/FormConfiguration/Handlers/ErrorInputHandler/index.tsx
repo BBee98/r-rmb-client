@@ -1,11 +1,7 @@
-import type {FieldError} from "react-hook-form";
+import type {FieldErrors} from "react-hook-form";
 import {useTranslation} from "react-i18next";
 
-type ErrorInputHandlerProps = {
-    error: FieldError | undefined
-}
-
-export const ErrorInputHandler = ({error}: ErrorInputHandlerProps) => {
+export const ErrorInputHandler = ({error}: FieldErrors) => {
 
     const { t } = useTranslation()
 

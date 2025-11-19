@@ -7,7 +7,7 @@ type UseGetUrlProps = {
 }
 
 export const useGetUrl = ({env, version = "LATEST", endpoint}: UseGetUrlProps) => {
-    const vEnv = env || import.meta.env.VITE_API_DEV_URL
+    const vEnv = (env || import.meta.env.VITE_API_DEV_URL).toLowerCase();
     const vVersion = version
     return `${vEnv}/${vVersion}/${endpoint}`;
 }
